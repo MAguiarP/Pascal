@@ -1,20 +1,39 @@
-Program Diferente_3 ;
-var
-N1,N2, Soma:Real;
-T:Real;
-
+Program Media ;
+var prova1, prova2, prova3, prova4, media:real;
 Begin
-	repeat
-	writeln('digite a primeira nota:');
-	readln(N1);
-	writeln('Digite a segunda nota:');
-	readln(N2);  
-	Soma:=N1+N1;
-	T:=Soma/2;
-	writeln(T:2:2);
-	if(T>=6) or (T<=10) then
-	writeln('Esta media e boa');
-	until(T<6);
-	readln;
-   
+  writeln('Digite a nota da prova 1');
+  read(prova1);
+  writeln('Digite a nota da prova 2');
+  read(prova2);
+  writeln('Digite a nota da prova 3');
+  read(prova3);
+  writeln('Digite a nota da prova 4');
+  read(prova4); 
+  media:=(prova1+prova2+prova3+prova4)/4;
+  
+  if media <= 2 then
+  begin
+  	writeln('Media Péssima');
+  	read(media);
+	end
+	else if (media >2) and (media<=4) then
+	begin
+		writeln('Media Ruim');
+		read(media);
+	end
+	else if (media >4) and (media <=6) then 
+	begin
+		writeln('Media Regular');
+		read(media);
+	end
+	else if (media >6) and (media <=8) then 
+	begin
+		writeln('Media Boa');
+		read(media);
+	end
+	else if (media >8) and (media <=10) then
+	begin
+		writeln('Media Excelente');
+		read(media);
+		end;
 End.
